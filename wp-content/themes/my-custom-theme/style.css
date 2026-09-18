@@ -1,0 +1,134 @@
+/*
+Theme Name: Custom Post Layout Theme
+Author: Your Name
+Version: 1.0
+Description: Theme tùy biến giao diện danh sách bài viết theo mẫu tin tức / sự kiện.
+*/
+
+/* Reset & Cơ bản */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* Container chính */
+.site-main {
+    padding: 40px 15px;
+}
+
+.post-container {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+/* Khối danh sách các bài viết */
+.custom-post-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Mỗi thẻ bài viết (Card) */
+.post-item {
+    display: flex;
+    align-items: stretch;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    padding: 20px 24px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Cột ngày tháng bên trái */
+.post-date-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-right: 24px;
+    margin-right: 24px;
+    border-right: 1px solid #edf2f7;
+    min-width: 85px;
+    flex-shrink: 0;
+}
+
+.post-date-box .day {
+    font-size: 38px;
+    font-weight: 700;
+    color: #2b2b2b;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+.post-date-box .month {
+    font-size: 11px;
+    font-weight: 600;
+    color: #888888;
+    text-transform: uppercase;
+    margin-top: 6px;
+    letter-spacing: 0.5px;
+}
+
+/* Cột nội dung bên phải */
+.post-content-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.post-title {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.post-title a {
+    color: #2b6cb0; /* Màu xanh chuẩn như hình */
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.15s ease;
+}
+
+.post-title a:hover {
+    color: #1a4971;
+}
+
+.post-excerpt {
+    font-size: 13.5px;
+    color: #666666;
+    line-height: 1.55;
+    margin: 0;
+}
+
+/* Đáp ứng màn hình nhỏ (Mobile) */
+@media (max-width: 480px) {
+    .post-item {
+        padding: 15px;
+    }
+    .post-date-box {
+        padding-right: 15px;
+        margin-right: 15px;
+        min-width: 65px;
+    }
+    .post-date-box .day {
+        font-size: 30px;
+    }
+    .post-title {
+        font-size: 15px;
+    }
+}
