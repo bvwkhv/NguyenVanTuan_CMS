@@ -249,3 +249,95 @@ body {
         flex-direction: column;
     }
 }
+
+/* module 12 */
+/* Layout 3 Cột (Sidebar Trái - Content - Sidebar Phải) */
+.main-layout-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 15px;
+    gap: 25px;
+}
+
+/* Cột trái & Cột phải */
+.sidebar-left,
+.sidebar-right {
+    flex: 0 0 220px;
+    min-width: 0;
+}
+
+/* Cột giữa */
+.content-center {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Khối Widget chứa Archive & Comments */
+.widget-box {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.widget-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #4a5568;
+    margin: 0 0 8px 0;
+    position: relative;
+    display: inline-block;
+}
+
+/* Đường gạch trang trí dưới tiêu đề Widget */
+.widget-title::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #a0aec0;
+    margin-top: 6px;
+    margin-bottom: 12px;
+}
+
+/* Định dạng danh sách link */
+.widget-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.widget-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #edf2f7;
+}
+
+.widget-list li:last-child {
+    border-bottom: none;
+}
+
+.widget-list a {
+    color: #3182ce;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    transition: color 0.2s ease;
+}
+
+.widget-list a:hover {
+    color: #2b6cb0;
+    text-decoration: underline;
+}
+
+/* Co giãn linh hoạt trên giao diện di động */
+@media (max-width: 850px) {
+    .main-layout-container {
+        flex-direction: column;
+    }
+    .sidebar-left,
+    .sidebar-right {
+        flex: 1 1 100%;
+    }
+}
