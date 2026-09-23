@@ -341,3 +341,107 @@ body {
         flex: 1 1 100%;
     }
 }
+
+/* module 17 */
+/* Styling cho Trang chi tiết (Single Post) */
+.single-post-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #2d3748;
+    margin-bottom: 8px;
+}
+
+.post-meta {
+    font-size: 13px;
+    color: #718096;
+    margin-bottom: 20px;
+}
+
+.single-post-content {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #2d3748;
+    margin-bottom: 30px;
+}
+
+/* MODULE TÁC GIẢ BÀI VIẾT (AUTHOR BOX) */
+.author-box {
+    display: flex;
+    align-items: center;
+    background-color: #f7fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #3182ce;
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin: 25px 0;
+}
+
+.author-avatar {
+    margin-right: 18px;
+    flex-shrink: 0;
+}
+
+.author-avatar img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.author-info {
+    flex-grow: 1;
+}
+
+.author-name {
+    margin: 0 0 6px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #2d3748;
+}
+
+.author-name a {
+    color: #2b6cb0;
+    text-decoration: none;
+}
+
+.author-bio {
+    margin: 0 0 8px 0;
+    font-size: 13px;
+    color: #4a5568;
+    line-height: 1.4;
+}
+
+.author-more-posts a {
+    font-size: 12px;
+    font-weight: 600;
+    color: #3182ce;
+    text-decoration: none;
+}
+
+.author-more-posts a:hover {
+    text-decoration: underline;
+}
+
+/* Điều hướng Prev - Next Bài viết */
+.post-navigation-links {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+.post-navigation-links a {
+    color: #3182ce;
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    .author-box {
+        flex-direction: column;
+        text-align: center;
+    }
+    .author-avatar {
+        margin-right: 0;
+        margin-bottom: 12px;
+    }
+}

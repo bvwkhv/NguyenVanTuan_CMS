@@ -20,6 +20,9 @@
                     <?php the_content(); ?>
                 </div>
 
+                <!-- GỌI MODULE TÁC GIẢ BÀI VIẾT (MODULE 17) -->
+                <?php get_template_part( 'module_17/author-box' ); ?>
+
             </article>
 
             <hr>
